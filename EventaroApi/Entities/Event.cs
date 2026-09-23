@@ -15,12 +15,10 @@ namespace EventaroApi.Entities
         [Required]
         public required DateTime EventEnd { get; set; }
         public StatusEvent StatusEvent { get; set; } = StatusEvent.Draft;
-        
         //Foreign key
         public int OrganizationId { get; set; }
         public int EventTypeId { get; set; }
         public int UbicationId { get; set; }
-
         //Navigation properties
         public Organization? Organization { get; set; }
         public EventType? EventType { get; set; }

@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
+using EventaroApi.DTOs.EventTypeDTOs;
 using EventaroApi.DTOs.OrganizationDTOs;
 using EventaroApi.DTOs.UserDTOs;
 using EventaroApi.Entities;
 
 namespace EventaroApi.Helpers
 {
-    public class AutoMapperProfile: Profile
+    public class AutoMapperProfile : Profile
     {
         public AutoMapperProfile()
         {
@@ -29,7 +30,11 @@ namespace EventaroApi.Helpers
             CreateMap<CreateOrganizationDTO, Organization>();
             CreateMap<Organization, ListOrganizationDTO>();
             CreateMap<Organization, ResponseOrganizationDTO>();
-            CreateMap<UpdateOrganizationDTO, Organization>();
+
+            //Mapper of EventType
+            CreateMap<CreateEventTypeDTO, EventType>();
+            CreateMap<EventType, ResponseEventTypeDTO>();
+            CreateMap<EventType, ListEventTypeDTO>();
         }
     }
 }

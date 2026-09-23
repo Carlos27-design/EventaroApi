@@ -47,6 +47,7 @@ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 services.AddScoped<IUserService, UserServices>();
 services.AddScoped<IOrganizationService, OrganizationServices>();
+services.AddScoped<IEventTypeService, EventTypeServices>();
 
 services.AddControllers().AddNewtonsoftJson();
 
