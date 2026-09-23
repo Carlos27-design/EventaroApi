@@ -174,10 +174,13 @@ C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\staticweba
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\Eventaro.14F0435C.Up2Date
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\EventaroApi.dll
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\refint\EventaroApi.dll
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\EventaroApi.pdb
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\EventaroApi.genruntimeconfig.cache
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\ref\EventaroApi.dll
+C:\Users\desec\source\repos\EventaroApi\EventaroApi\bin\Debug\net10.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\desec\source\repos\EventaroApi\EventaroApi\bin\Debug\net10.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\desec\source\repos\EventaroApi\EventaroApi\bin\Debug\net10.0\Newtonsoft.Json.Bson.dll
+C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\EventaroApi.sourcelink.json

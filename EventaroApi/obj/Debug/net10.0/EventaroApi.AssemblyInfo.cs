@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventaroApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e169bb7463bebeb5894c5915f6bc4976e169f80d")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventaroApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventaroApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

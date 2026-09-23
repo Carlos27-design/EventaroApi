@@ -46,8 +46,9 @@ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 
 services.AddScoped<IUserService, UserServices>();
+services.AddScoped<IOrganizationService, OrganizationServices>();
 
-services.AddControllers();
+services.AddControllers().AddNewtonsoftJson();
 
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

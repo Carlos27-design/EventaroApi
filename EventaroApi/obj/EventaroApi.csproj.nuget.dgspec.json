@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj": {}
+    "c:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj": {
+    "c:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj",
+        "projectUniqueName": "c:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj",
         "projectName": "EventaroApi",
-        "projectPath": "C:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj",
+        "projectPath": "c:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj",
         "packagesPath": "C:\\Users\\desec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\obj\\",
+        "outputPath": "c:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\desec\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\desec\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,13 +52,21 @@
             },
             "MailKit": {
               "target": "Package",
-              "version": "[4.17.0, )"
+              "version": "[4.18.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[10.0.12, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.12, )"
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[10.0.12, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[10.0.12, )"
             },

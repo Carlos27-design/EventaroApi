@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace EventaroApi.DTOs.UserDTOs
+namespace EventaroApi.DTOs.UserDTOs;
+
+public class LoginDTO
 {
-    public class LoginDTO
-    {
-        public  string Email { get; set; }
-        public  string Password { get; set; }
-    }
+    public string Email { get; set; }
+    public string Password { get; set; }
 }

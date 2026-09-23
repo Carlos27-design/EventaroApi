@@ -10,7 +10,7 @@ namespace EventaroApi.Data
         public ApplicationDbContext(DbContextOptions options) : base(options){}
 
         public DbSet<Organization> Organizations { get; set; }
-        public DbSet<User> Users { get; set; }
+        public new DbSet<User> Users { get; set; }
         public DbSet<EventType> EventTypes { get; set; }
         public DbSet<Ubication> Ubications { get; set; }
         public DbSet<Event> Events { get; set; }
