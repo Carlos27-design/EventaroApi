@@ -18,6 +18,8 @@ var services = builder.Services;
 
 services.AddAutoMapper(cfg => { }, typeof(Program));
 
+services.AddHttpContextAccessor();
+
 services.AddSingleton<GeometryFactory>(NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326));
 
 services.AddDbContext<ApplicationDbContext>(options =>
@@ -45,15 +47,21 @@ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 
+
+
 services.AddScoped<IUserService, UserServices>();
 services.AddScoped<IOrganizationService, OrganizationServices>();
 services.AddScoped<IEventTypeService, EventTypeServices>();
+services.AddScoped<IAlmacenadorArchivo, AlmacenadorArchivoLocal>();
+services.AddScoped<IEventServices, EventServices>();
 
 services.AddControllers().AddNewtonsoftJson();
 
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 services.AddOpenApi();
+
+services.AddHostedService<EventStatusUpdateService>();
 
 var app = builder.Build();
 
@@ -64,6 +72,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 

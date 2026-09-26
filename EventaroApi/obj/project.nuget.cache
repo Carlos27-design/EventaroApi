@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BfTnJ4mE2dg=",
+  "dgSpecHash": "aM0j+FfWk+A=",
   "success": true,
-  "projectFilePath": "c:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj",
+  "projectFilePath": "C:\\Users\\desec\\source\\repos\\EventaroApi\\EventaroApi\\EventaroApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\desec\\.nuget\\packages\\automapper\\16.2.0\\automapper.16.2.0.nupkg.sha512",
     "C:\\Users\\desec\\.nuget\\packages\\azure.core\\1.50.0\\azure.core.1.50.0.nupkg.sha512",

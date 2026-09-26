@@ -184,3 +184,5 @@ C:\Users\desec\source\repos\EventaroApi\EventaroApi\bin\Debug\net10.0\Microsoft.
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\bin\Debug\net10.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\bin\Debug\net10.0\Newtonsoft.Json.Bson.dll
 C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\EventaroApi.sourcelink.json
+C:\Users\desec\source\repos\EventaroApi\EventaroApi\bin\Debug\net10.0\EventaroApi.staticwebassets.runtime.json
+C:\Users\desec\source\repos\EventaroApi\EventaroApi\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

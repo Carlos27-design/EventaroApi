@@ -16,6 +16,7 @@ namespace EventaroApi.Data
         public DbSet<Event> Events { get; set; }
         public DbSet<EventImg> EventImgs { get; set; }
         public DbSet<Inscription> Inscriptions { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Event>().Property(e => e.Status).HasConversion<string>();

@@ -128,6 +128,11 @@ namespace EventaroApi.Services
                 new Claim(ClaimTypes.Surname, userInfo.LastName)
             };
 
+            if (userInfo.OrganizationId.HasValue)
+            {
+                claims.Add(new Claim("OrganizationId", userInfo.OrganizationId.Value.ToString()));
+            }
+
             var identityUser = await _userManager.FindByEmailAsync(userInfo.Email);
 
             if(identityUser == null)

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EventaroApi.DTOs.EventDTOs;
 using EventaroApi.DTOs.EventTypeDTOs;
 using EventaroApi.DTOs.OrganizationDTOs;
 using EventaroApi.DTOs.UserDTOs;
@@ -35,6 +36,26 @@ namespace EventaroApi.Helpers
             CreateMap<CreateEventTypeDTO, EventType>();
             CreateMap<EventType, ResponseEventTypeDTO>();
             CreateMap<EventType, ListEventTypeDTO>();
+
+            //Mapper of Event
+            CreateMap<CreateEventDTO, Event>()
+                .ForMember(dest => dest.Ubication, opt => opt.Ignore())
+                .ForMember(dest => dest.UbicationId, opt => opt.Ignore())
+                .ForMember(dest => dest.EventImgs, opt => opt.Ignore());
+            CreateMap<UpdateEventDTO, Event>()
+                .ForMember(dest => dest.Ubication, opt => opt.Ignore())
+                .ForMember(dest => dest.UbicationId, opt => opt.Ignore())
+                .ForMember(dest => dest.EventImgs, opt => opt.Ignore());
+            CreateMap<Event, ResponseEventDTO>()
+                .ForMember(dest => dest.OrganizationName, opt => opt.MapFrom(src => src.Organization != null ? src.Organization.Name : null))
+                .ForMember(dest => dest.EventTypeName, opt => opt.MapFrom(src => src.EventType != null ? src.EventType.Name : null))
+                .ForMember(dest => dest.Ubication, opt => opt.MapFrom(src => src.Ubication != null ? src.Ubication.Address : null))
+                .ForMember(dest => dest.ImageUrls, opt => opt.MapFrom(src => src.EventImgs.Select(img => img.ImgUrl).ToList()));
+            CreateMap<Event, ResponseEventDTO>()
+                .ForMember(dest => dest.OrganizationName, opt => opt.MapFrom(src => src.Organization != null ? src.Organization.Name : null))
+                .ForMember(dest => dest.EventTypeName, opt => opt.MapFrom(src => src.EventType != null ? src.EventType.Name : null))
+                .ForMember(dest => dest.Ubication, opt => opt.MapFrom(src => src.Ubication != null ? src.Ubication.Address : null))
+                .ForMember(dest => dest.ImageUrls, opt => opt.MapFrom(src => src.EventImgs.Select(img => img.ImgUrl).ToList()));
         }
     }
 }

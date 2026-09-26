@@ -1,5 +1,349 @@
 [
   {
+    "ContainingType": "EventaroApi.Controllers.EventControllers",
+    "Method": "GetAllEvent",
+    "RelativePath": "api/events",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "organizationId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventaroApi.DTOs.EventDTOs.ResponseEventDTO, EventaroApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventControllers",
+    "Method": "Create",
+    "RelativePath": "api/events",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EventStart",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EventEnd",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrganizationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "EventTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ubication.Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ubication.Latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ubication.Longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Images",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventaroApi.DTOs.EventDTOs.ResponseEventDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventControllers",
+    "Method": "GetByIdEvent",
+    "RelativePath": "api/events/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventaroApi.DTOs.EventDTOs.ResponseEventDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventControllers",
+    "Method": "update",
+    "RelativePath": "api/events/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EventStart",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EventEnd",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrganizationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "EventTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ubication.Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ubication.Latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ubication.Longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Images",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventaroApi.DTOs.EventDTOs.ResponseEventDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventControllers",
+    "Method": "DeleteEvent",
+    "RelativePath": "api/events/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventControllers",
+    "Method": "GetMyOrganization",
+    "RelativePath": "api/events/my-organization",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventTypeControllers",
+    "Method": "GetAll",
+    "RelativePath": "api/eventType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventaroApi.DTOs.EventTypeDTOs.ResponseEventTypeDTO, EventaroApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventTypeControllers",
+    "Method": "Create",
+    "RelativePath": "api/eventType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createEventType",
+        "Type": "EventaroApi.DTOs.EventTypeDTOs.CreateEventTypeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventaroApi.DTOs.EventTypeDTOs.ResponseEventTypeDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventTypeControllers",
+    "Method": "GetById",
+    "RelativePath": "api/eventType/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventaroApi.DTOs.EventTypeDTOs.ResponseEventTypeDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventTypeControllers",
+    "Method": "Patch",
+    "RelativePath": "api/eventType/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "patchDoc",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EventaroApi.DTOs.EventTypeDTOs.ResponseEventTypeDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventaroApi.Controllers.EventTypeControllers",
+    "Method": "Delete",
+    "RelativePath": "api/eventType/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EventaroApi.Controllers.OrganizationControllers",
     "Method": "GetAllOrganization",
     "RelativePath": "api/organization",
@@ -9,7 +353,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventaroApi.DTOs.OrganizationDTO.ResponseOrganizationDTO, EventaroApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventaroApi.DTOs.OrganizationDTOs.ResponseOrganizationDTO, EventaroApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -29,13 +373,13 @@
     "Parameters": [
       {
         "Name": "createOrganization",
-        "Type": "EventaroApi.DTOs.OrganizationDTO.CreateOrganizationDTO",
+        "Type": "EventaroApi.DTOs.OrganizationDTOs.CreateOrganizationDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "EventaroApi.DTOs.OrganizationDTO.ResponseOrganizationDTO",
+        "Type": "EventaroApi.DTOs.OrganizationDTOs.ResponseOrganizationDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +405,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EventaroApi.DTOs.OrganizationDTO.ResponseOrganizationDTO",
+        "Type": "EventaroApi.DTOs.OrganizationDTOs.ResponseOrganizationDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -92,7 +436,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EventaroApi.DTOs.OrganizationDTO.ResponseOrganizationDTO",
+        "Type": "EventaroApi.DTOs.OrganizationDTOs.ResponseOrganizationDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",

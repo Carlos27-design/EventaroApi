@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventaroApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6a395b8343e0bfc786f984055873dacccaf75e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f99f8f437b7344c2a8499647a4e19d963e798e79")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventaroApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventaroApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
