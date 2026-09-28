@@ -12,7 +12,7 @@ using NetTopologySuite.Geometries;
 
 namespace EventaroApi.Services
 {
-    public class EventServices : IEventServices
+    public class EventServices : IEventService
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;

@@ -2,7 +2,7 @@ using EventaroApi.DTOs.EventDTOs;
 
 namespace EventaroApi.Services.Interfaces;
 
-public interface IEventServices
+public interface IEventService
 {
     public Task<IEnumerable<ResponseEventDTO>> GetAllEvent(int? organizationId = null);
     public Task<ResponseEventDTO> GetEventById(int id);

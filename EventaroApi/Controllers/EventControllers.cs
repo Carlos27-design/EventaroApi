@@ -9,9 +9,9 @@ namespace EventaroApi.Controllers
     [Route("api/events")]
     public class EventControllers : ControllerBase
     {
-        private readonly IEventServices _eventService;
+        private readonly IEventService _eventService;
 
-        public EventControllers(IEventServices eventService)
+        public EventControllers(IEventService eventService)
         {
             this._eventService = eventService;
         }

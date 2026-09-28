@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EventaroApi.DTOs.InscriptionDTOs;
 using EventaroApi.DTOs.EventDTOs;
 using EventaroApi.DTOs.EventTypeDTOs;
 using EventaroApi.DTOs.OrganizationDTOs;
@@ -51,11 +52,12 @@ namespace EventaroApi.Helpers
                 .ForMember(dest => dest.EventTypeName, opt => opt.MapFrom(src => src.EventType != null ? src.EventType.Name : null))
                 .ForMember(dest => dest.Ubication, opt => opt.MapFrom(src => src.Ubication != null ? src.Ubication.Address : null))
                 .ForMember(dest => dest.ImageUrls, opt => opt.MapFrom(src => src.EventImgs.Select(img => img.ImgUrl).ToList()));
-            CreateMap<Event, ResponseEventDTO>()
-                .ForMember(dest => dest.OrganizationName, opt => opt.MapFrom(src => src.Organization != null ? src.Organization.Name : null))
-                .ForMember(dest => dest.EventTypeName, opt => opt.MapFrom(src => src.EventType != null ? src.EventType.Name : null))
-                .ForMember(dest => dest.Ubication, opt => opt.MapFrom(src => src.Ubication != null ? src.Ubication.Address : null))
-                .ForMember(dest => dest.ImageUrls, opt => opt.MapFrom(src => src.EventImgs.Select(img => img.ImgUrl).ToList()));
+
+            //Mapper of Inscription
+            CreateMap<CreateInscriptionDTO, Inscription>();
+            CreateMap<Inscription, UpdateInscriptionDTO>();
+            CreateMap<Inscription, ResponseInscriptionDTO>();
+            CreateMap<Inscription, ListInscriptionDTO>();
         }
     }
 }
