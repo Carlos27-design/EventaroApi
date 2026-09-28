@@ -54,6 +54,7 @@ services.AddScoped<IOrganizationService, OrganizationServices>();
 services.AddScoped<IEventTypeService, EventTypeServices>();
 services.AddScoped<IAlmacenadorArchivo, AlmacenadorArchivoLocal>();
 services.AddScoped<IEventService, EventServices>();
+services.AddScoped<IInscriptionService, InscriptionServices>();
 
 services.AddControllers().AddNewtonsoftJson();
 

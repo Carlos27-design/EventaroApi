@@ -57,28 +57,77 @@ public class InscriptionServices : IInscriptionService
         return true;
     }
 
-    public Task<IEnumerable<ResponseInscriptionDTO>> GetAll()
+    public async Task<IEnumerable<ResponseInscriptionDTO>> GetAll()
     {
-        throw new NotImplementedException();
+        var inscription = await _context.Inscriptions
+            .Include(i => i.Event)
+            .Include(i => i.User)
+            .ToListAsync();
+
+        return _mapper.Map<IEnumerable<ResponseInscriptionDTO>>(inscription);
     }
 
-    public Task<IEnumerable<ResponseInscriptionDTO>> GetByEventId(int eventId)
+    public async Task<IEnumerable<ResponseInscriptionDTO>> GetByEventId(int eventId)
     {
-        throw new NotImplementedException();
+        var inscriptionEvent = await _context.Inscriptions
+            .Where(i => i.EventId == eventId)
+            .Include(i => i.Event)
+            .Include(i => i.User)
+            .ToListAsync();
+
+        if(inscriptionEvent == null)
+        {
+            throw new Exception("No se encuentran Inscriptiones para este evento");
+        }
+        
+        return _mapper.Map<IEnumerable<ResponseInscriptionDTO>>(inscriptionEvent);
     }
 
-    public Task<ResponseInscriptionDTO> GetById(int id)
+    public async Task<ResponseInscriptionDTO> GetById(int id)
     {
-        throw new NotImplementedException();
+        var inscription = await _context.Inscriptions
+            .Include(i => i.Event)
+            .Include(i => i.User)
+            .FirstOrDefaultAsync(i => i.Id == id);
+
+        if(inscription == null)
+        {
+            throw new Exception($"La Inscripción con ID {id} no existe");
+        }
+
+        return _mapper.Map<ResponseInscriptionDTO>(inscription);
     }
 
-    public Task<IEnumerable<ResponseInscriptionDTO>> GetByUserId(string userId)
+    public async Task<IEnumerable<ResponseInscriptionDTO>> GetByUserId(string userId)
     {
-        throw new NotImplementedException();
+        var inscriptions = await _context.Inscriptions
+            .Where(i => i.UserId == userId)
+            .Include(i => i.Event)
+            .Include(i => i.User)
+            .ToListAsync();
+
+        if(inscriptions.Any())
+        {
+            return Enumerable.Empty<ResponseInscriptionDTO>();
+        }
+
+        return _mapper.Map<IEnumerable<ResponseInscriptionDTO>>(inscriptions);    
     }
 
-    public Task<ResponseInscriptionDTO> Update(int id, UpdateInscriptionDTO updateInscription)
+    public async Task<ResponseInscriptionDTO> Update(int id, UpdateInscriptionDTO updateInscription)
     {
-        throw new NotImplementedException();
+        var inscription = await _context.Inscriptions.FindAsync(id);
+
+        if(inscription == null)
+        {
+            throw new Exception($"La Inscripción con ID {id} no existe");
+        }
+
+        inscription.StatusInscription = StatusInscription.Confirmed;
+        inscription.UpdatedAt = DateTime.UtcNow;
+
+        await _context.SaveChangesAsync();
+        
+        return _mapper.Map<ResponseInscriptionDTO>(inscription);
     }
 }
